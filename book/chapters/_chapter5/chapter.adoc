@@ -1,0 +1,83 @@
+// Check more syntax at https://github.com/powerman/asciidoc-cheatsheet
+// Set imagesdir property here if needed (to preview a single chapter)
+//:imagesdir: images/
+
+== Desarrollador seleccionado
+
+De acuerdo a la siguiente ADR, se indica como se selecciona al desarrollador para el sistema:
+### Selección de desarrollador con experiencia básica/moderada sobre desarrollador senior especializado
+
+- **Status**: accepted
+- **Date**: 2024-10-18
+
+#### Context and Problem Statement
+
+La decisión implica seleccionar el tipo de desarrollador adecuado para llevar a cabo el proyecto. El proyecto es de bajo presupuesto y requiere implementar una solución relativamente sencilla, tanto en términos de backend como de frontend, utilizando tecnologías estándar (CMS WordPress y PostgreSQL). La consideración principal es encontrar un equilibrio entre el costo y la capacidad técnica, asegurando que el desarrollador pueda entregar el proyecto sin requerir habilidades avanzadas o especializadas que excedan las necesidades del proyecto y el presupuesto disponible.
+
+#### Considered Options
+
+1. **Desarrollador con experiencia básica/moderada**
+   - Menor costo de contratación, ajustado a las limitaciones del presupuesto
+   - Capaz de manejar el desarrollo requerido sin necesidad de habilidades avanzadas o especializadas
+   - Menor experiencia, pero suficiente para desarrollar un sitio con CMS WordPress y configurar bases de datos relacionales sencillas
+
+2. **Desarrollador senior especializado**
+   - Mayor costo de contratación
+   - Experiencia y habilidades avanzadas que pueden llevar a una solución más robusta, pero innecesaria para los requerimientos actuales del proyecto
+   - Alta especialización que excede las necesidades de un proyecto simple basado en tecnologías estándar
+
+#### Decision Outcome
+
+**Elegimos la opción 1: Desarrollador con experiencia básica/moderada.**
+
+- La prioridad del proyecto es minimizar los costos, ya que se trata de un proyecto con recursos limitados y sin grandes requerimientos técnicos. Un desarrollador con experiencia básica/moderada es suficiente para implementar una solución utilizando WordPress y PostgreSQL. Esto asegura que se cumplan los requisitos sin incurrir en gastos excesivos en contratación de talento especializado que no es necesario para la escala y complejidad del proyecto actual.
+
+- **Status**: accepted
+
+#### Consequences
+
+- **Ventajas**:
+  - **Costo reducido**: Contratar un desarrollador con experiencia básica/moderada resulta significativamente más económico que un desarrollador senior, lo que permite ajustar el presupuesto y destinar recursos a otras áreas si es necesario.
+  - **Eficiencia adecuada**: El proyecto no requiere habilidades avanzadas, por lo que un desarrollador con conocimientos básicos en WordPress y PostgreSQL podrá realizar el trabajo de manera efectiva sin necesidad de entrenamiento adicional.
+  - **Ajuste al alcance del proyecto**: La selección de un desarrollador menos especializado se ajusta bien a la simplicidad del proyecto y asegura que los recursos sean utilizados de manera eficiente.
+
+- **Desventajas**:
+  - **Posible limitación en escalabilidad futura**: Si el proyecto se expande en el futuro y requiere características más complejas, el desarrollador seleccionado podría no tener las habilidades para cubrir esas necesidades, lo que implicaría contratar soporte adicional.
+  - **Riesgo de calidad**: Aunque suficiente para los requisitos actuales, la falta de experiencia avanzada puede implicar una menor calidad en la implementación o en la resolución de problemas inesperados, aunque esto se considera aceptable dado el costo reducido.
+
+
+== Costo total y tiempos
+
+Los tiempos de desarrollo pueden tomar entre 1 a 2 meses. Dado es que es un desarrollo relativamente sencillo. Considerando los sueldos promedios de desarrollador mensual son de $1.200.000 y el costo mensual por planes de 48 meses en Hostinger es de 3.99 Euros, se estima que los costos sean los siguientes:
+
+.Calculos
+[source,slq]
+----
+Desarrollo 2 meses = 2.400.000 clp
+Arriendo hosting 60 meses = 240 eur -> 247.000 clp
+Total presupuesto = 2.647.000 clp
+
+----
+
+// Need special config in Dockerfile
+// .Mermaid
+// [mermaid]
+// ----
+// gitGraph
+//     commit
+//     commit
+//     branch develop
+//     checkout develop
+//     commit
+//     commit
+//     checkout main
+//     merge develop
+//     commit
+//     commit
+// ----
+
+// .BPMN
+// [bpmn]
+// ----
+// include::resources/pizza.bpmn[]
+// ----

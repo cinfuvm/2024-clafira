@@ -1,0 +1,284 @@
+// Check more syntax at https://github.com/powerman/asciidoc-cheatsheet
+// Set imagesdir property here if needed (to preview a single chapter)
+//:imagesdir: images/
+
+== Persona
+
+Se distingue a la "Persona" y a la "Persona Negativa"
+
+=== Persona Positiva
+#### Role
+**Usuario de Plataforma de Mascotas**
+
+#### Name
+**Alex**
+
+#### Image
+
+image::https://i.ytimg.com/vi/80DEXHBINPw/maxresdefault.jpg[Placeholder Image]
+
+
+#### Quote
+
+____
+"Me encanta pasar tiempo al aire libre con mis mascotas, descubrir nuevos lugares y apoyar causas que importan. Siempre estoy buscando maneras de ayudar a otros, ya sea de forma voluntaria o simplemente compartiendo mi conocimiento y experiencias."
+____
+
+#### Background
+
+- *Age:* 20 - 50 
+- *Location:* Varias ciudades, tanto urbanas como rurales 
+- *Marital Status:* Diversos estados civiles (solteros, casados, en pareja)
+- *Kids:* Pueden o no tener hijos
+- *Occupation:* Empleos diversos (oficinistas, trabajadores independientes, profesionales, estudiantes, etc.)
+- *Education:* Diversos niveles de educación (desde secundaria hasta estudios universitarios)
+
+#### Characteristics
+
+- Empático
+- Solidario
+- Amante de los animales
+- Disfruta de la naturaleza
+- Sociable y amigable
+- Curioso y dispuesto a aprender
+
+#### Goals/Needs
+
+* Disfrutar de actividades al aire libre junto a sus mascotas. Explorar nuevos parques, senderos y lugares amigables con los animales.
+* Ayudar a otros que compartan la pasión por los animales, ya sea a través de voluntariado en refugios o apoyando causas solidarias.
+* Mantenerse informado y conectado con otras personas a través de redes sociales, buscando comunidades y grupos afines a sus intereses.
+* Simplificar la vida diaria con soluciones tecnológicas que les permitan gestionar fácilmente las necesidades de sus mascotas.
+
+##### TECH KNOWLEDGE
+
+- 🟦: Normal
+
+##### KNOWS STAFF SKILLS
+
+- 🟦: Normal
+
+##### TIME AVAILABILITY
+
+- 🟦: Normal
+
+
+#### About
+
+Los usuarios son personas empáticas y solidarias que tienen, han tenido o planean tener mascotas. Se caracterizan por ser amantes de la naturaleza y disfrutar actividades al aire libre, como pasear por el parque, hacer senderismo o explorar nuevos lugares. Su pasión por los animales los motiva a involucrarse en causas solidarias y apoyar iniciativas relacionadas con el bienestar animal, participando como voluntarios o donando a organizaciones.
+
+Tienen conocimientos suficientes para manejar computadoras y dispositivos móviles, lo que les permite conectarse fácilmente con otras personas a través de redes sociales como Instagram y Facebook. A pesar de su afinidad por la tecnología, siguen disfrutando de medios tradicionales como la televisión. Esto les permite estar informados y seguir contenido variado, desde noticias hasta programas de entretenimiento que se alinean con sus intereses.
+
+Además de su amor por los animales, disfrutan conocer nuevas personas y compartir experiencias. Buscan herramientas y plataformas que simplifiquen la vida cotidiana, especialmente aquellas que les ayudan a cuidar mejor de sus mascotas y a conectar con comunidades afines. Ya sea buscando lugares pet-friendly, servicios de cuidado para sus animales o recursos educativos, quieren soluciones prácticas que mejoren tanto su vida como la de sus compañeros de cuatro patas.
+
+
+=== Persona Negativa
+#### Role
+**Usuario Negativo de Plataforma de Mascotas**
+
+#### Name
+**Bastián**
+
+#### Image
+image::https://thumbs.dreamstime.com/z/hombre-del-hillbilly-27641934.jpg[Placeholder Image]
+
+#### Quote
+
+____
+"Me encanta pasar tiempo al aire libre cazando, haciendo asados, vendiendo perros. Tengo que ir a apostar en pelea de gallos y en carreras de galgos."
+____
+
+#### Background
+
+- *Age:* 0 - 90 
+- *Location:* Varias ciudades, tanto urbanas como rurales, mas rurales. 
+- *Marital Status:* Diversos estados civiles (solteros, casados, en pareja)
+- *Kids:* Pueden o no tener hijos
+- *Occupation:* Empleos diversos (oficinistas, trabajadores independientes, cazadores, profesionales, estudiantes, etc.)
+- *Education:* Diversos niveles de educación (desde secundaria hasta estudios universitarios)
+
+#### Characteristics
+
+- Poco empatico
+- Poco solidario
+- Detractor de los animales
+- Disfruta de la naturaleza cazando
+- Conflictivo
+- Cerrado de mente, enchapado a la antigua
+
+#### Goals/Needs
+
+* Disfrutar de actividades al aire libre matando animales.
+* Ayudar a otros que compartan la pasión por los animales muertos, ya sea a través de asados, rodeos, apuestas, etc.
+* Mantenerse informado y conectado con otras personas a través de redes sociales, buscando comunidades y grupos afines a sus intereses.
+
+##### TECH KNOWLEDGE
+
+
+- 🟩: Alto
+
+##### KNOWS STAFF SKILLS
+
+- 🟨: Bajo
+
+
+##### TIME AVAILABILITY
+
+- 🟨: Baja
+
+#### About
+
+Personas que les gusta la caza, el rodeo, que no son vegetarianos/veganos. Pueden consumir tiempo viendo carreras de animales, apuestas con animales de pelea. Entre 0-90 años. Personas con acceso a redes sociales y conocimiento de tecnologías.
+
+[WARNING]
+====
+Estas decisiones tendrán consecuencias!
+====
+
+
+.Vega-Lite
+[vega]
+----
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Número de animales cazados en los últimos 3 años.",
+  "data": {
+    "values": [
+      {"year": "2021", "animals_hunted": 150},
+      {"year": "2022", "animals_hunted": 200},
+      {"year": "2023", "animals_hunted": 250}
+    ]
+  },
+  "mark": "line",
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Año"
+    },
+    "y": {
+      "field": "animals_hunted",
+      "type": "quantitative",
+      "title": "Número de Animales Cazados"
+    },
+    "tooltip": [
+      {"field": "year", "type": "ordinal", "title": "Año"},
+      {"field": "animals_hunted", "type": "quantitative", "title": "Animales Cazados"}
+    ]
+  }
+}
+
+----
+
+.PlantUML
+[plantuml]
+----
+@startuml
+actor Usuario as U
+participant "Sistema de Rifas" as S
+
+U -> S: Accede al sitio
+S -> U: Muestra pantalla principal
+
+U -> S: Selecciona la opción "Comprar número de rifa"
+S -> U: Muestra listado de números disponibles 
+
+U -> S: Selecciona número de rifa
+S -> U: Solicita detalles de pago
+
+U -> S: Proporciona detalles de pago
+S -> S: Procesa el pago 
+
+alt Pago exitoso
+    S -> U: Confirma compra y muestra recibo
+else Pago fallido
+    S -> U: Notifica error en el pago 
+end
+
+U -> S: Se muere 🔒
+@enduml
+
+----
+
+== Storyboard
+image::Storyboard.png[Placeholder Image]
+
+
+.C4
+
+Check https://github.com/plantuml-stdlib/C4-PlantUML
+
+[plantuml]
+----
+@startuml C4_Elements
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Person(user, "Usuario", "Participa en rifas ")
+System(system, "Sistema de Rifas", "Permite gestionar rifas, boletos y usuarios")
+
+Container(rifaContainer, "Sorteo", "Aplicación Web", "Gestiona los sorteos")
+
+Rel(user, rifaContainer, "Gestiona el sorteo de rifas", "Usa")
+Rel(rifaContainer, system, "Gestiona datos", "API")
+
+@enduml
+
+----
+
+[plantuml]
+----
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+!include DEVICONS/angular.puml
+!include DEVICONS/java.puml
+!include DEVICONS/msql_server.puml
+!include FONTAWESOME/users.puml
+
+Person(user, "Usuario", "Persona que participa en la rifa", $sprite="users")
+
+Container(spa, "Interfaz de Usuario", "Angular", "La interfaz principal que el usuario utiliza", $sprite="angular")
+Container(api, "API", "Java", "Maneja toda la lógica de negocio", $sprite="java")
+ContainerDb(db, "Base de Datos", "PostgreSQL", "Almacena información sobre usuarios, rifas y resultados", $sprite="msql_server")
+
+Container(records, "Registros de Rifa", "PostgreSQL", "Almacena información de registros de rifas", $sprite="msql_server")
+Container(results, "Resultados de Rifa", "PostgreSQL", "Almacena los resultados de las rifas", $sprite="msql_server")
+
+Rel(user, spa, "Utiliza")
+Rel(spa, api, "Llama a")
+Rel_R(api, db, "Lee/Escribe en")
+Rel_R(api, records, "Lee/Escribe en")
+Rel_R(api, results, "Lee/Escribe en")
+
+SHOW_FLOATING_LEGEND()
+Lay_Distance(LEGEND(), db, 1)
+@enduml
+
+----
+
+
+
+
+// Need special config in Dockerfile
+// .Mermaid
+// [mermaid]
+// ----
+// gitGraph
+//     commit
+//     commit
+//     branch develop
+//     checkout develop
+//     commit
+//     commit
+//     checkout main
+//     merge develop
+//     commit
+//     commit
+// ----
+
+// .BPMN
+// [bpmn]
+// ----
+// include::resources/pizza.bpmn[]
+// ----

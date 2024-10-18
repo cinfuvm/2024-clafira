@@ -1,0 +1,12 @@
+[bibliography]
+== Referencias
+
+[bibliography]
+
+.Websites
+
+- [[[IMB Topics]]] IBM. '¿Qué es PostgreSQL?' http://code.google.com/edu/languages/google-python-class/
+
+- [[[C4 model]]] C4. 'The C4 model for visualising software architecture' https://c4model.com/
+
+- [[[Nijas]]] Ninjas. 'ACIIDOC-BOOK-TEMPLATE' https://github.com/NinjasCL/asciidoc-book-template/tree/main

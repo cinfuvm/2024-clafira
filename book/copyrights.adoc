@@ -1,0 +1,7 @@
+[preface]
+[role="copyright"]
+
+== Copyright
+
+This document is licensed with Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International[3]
+image:https://raw.githubusercontent.com/NinjasCL/asciidoc-book-template/main/resources/images/by-nc-sa.svg[By copyright]

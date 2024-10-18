@@ -1,0 +1,11 @@
+[preface]
+== Prólogo
+[role="foreword"]
+En este proyecto se detalla la planificación de un sistema con las siguientes características:
+
+#### Fundación Clafira
+Es una fundación enfocada en rescatar animales y darles un hogar permanente. Para esto tienen una tienda física donde venden alimentos veganos, además de realizar rifas y otras actividades para dar apoyo al santuario de animales. Desean tener una tienda online donde las personas puedan comprar boletos de rifa y ser premiados. La rifa se sortea automáticamente cada viernes a las 18 horas.
+
+Nivel de Presupuesto: Bajo
+Estimación de transacciones al día: 1000
+Estimación de transacciónes al día (máximo): 5000

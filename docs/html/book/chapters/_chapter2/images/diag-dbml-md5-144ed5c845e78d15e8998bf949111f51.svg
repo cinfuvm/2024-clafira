@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg height='353pt' preserveAspectRatio='xMidYMid meet' viewBox='0.00 0.00 1909.22 353.07' width='1909pt' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<g class='graph' id='graph0' transform='scale(1 1) rotate(0) translate(4 349.07)'>
+<title>dbml</title>
+
+<g class='node' id='cliente'>
+<title>cliente</title>
+<ellipse cx='207.18' cy='-202.53' fill='none' rx='207.36' ry='130.22' stroke='black' stroke-width='0'/>
+<polygon fill='#1d71b8' points='63.18,-232.53 63.18,-292.53 352.18,-292.53 352.18,-232.53 63.18,-232.53' stroke='transparent'/>
+<polygon fill='none' points='63.18,-232.53 63.18,-292.53 352.18,-292.53 352.18,-232.53 63.18,-232.53' stroke='#29235c'/>
+<text fill='#ffffff' font-family='Helvetica,sans-Serif' font-size='32.00' font-weight='bold' text-anchor='start' x='99.2' y='-253.73'> &#160;&#160;&#160;&#160;&#160;&#160;cliente &#160;&#160;&#160;&#160;&#160;&#160;</text>
+<polygon fill='#e7e2dd' points='63.18,-172.53 63.18,-232.53 352.18,-232.53 352.18,-172.53 63.18,-172.53' stroke='transparent'/>
+<polygon fill='none' points='63.18,-172.53 63.18,-232.53 352.18,-232.53 352.18,-172.53 63.18,-172.53' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-weight='bold' text-anchor='start' x='73.83' y='-193.73'>id_cliente</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='208.97' y='-193.73'> &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='243.78' y='-193.73'>integer</text>
+<polygon fill='#e7e2dd' points='63.18,-112.53 63.18,-172.53 352.18,-172.53 352.18,-112.53 63.18,-112.53' stroke='transparent'/>
+<polygon fill='none' points='63.18,-112.53 63.18,-172.53 352.18,-172.53 352.18,-112.53 63.18,-112.53' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='74.18' y='-132.73'>mail &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='234.51' y='-133.73'>varchar</text>
+<polygon fill='none' points='61.68,-111.53 61.68,-293.53 352.68,-293.53 352.68,-111.53 61.68,-111.53' stroke='#29235c' stroke-width='2'/>
+</g>
+
+<g class='node' id='compraBoletos'>
+<title>compraBoletos</title>
+<ellipse cx='707.04' cy='-172.53' fill='none' rx='256.86' ry='172.57' stroke='black' stroke-width='0'/>
+<polygon fill='#1d71b8' points='528.04,-232.53 528.04,-292.53 887.04,-292.53 887.04,-232.53 528.04,-232.53' stroke='transparent'/>
+<polygon fill='none' points='528.04,-232.53 528.04,-292.53 887.04,-292.53 887.04,-232.53 528.04,-232.53' stroke='#29235c'/>
+<text fill='#ffffff' font-family='Helvetica,sans-Serif' font-size='32.00' font-weight='bold' text-anchor='start' x='538.61' y='-253.73'> &#160;&#160;&#160;&#160;&#160;&#160;compraBoletos &#160;&#160;&#160;&#160;&#160;&#160;</text>
+<polygon fill='#e7e2dd' points='528.04,-172.53 528.04,-232.53 887.04,-232.53 887.04,-172.53 528.04,-172.53' stroke='transparent'/>
+<polygon fill='none' points='528.04,-172.53 528.04,-232.53 887.04,-232.53 887.04,-172.53 528.04,-172.53' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='539.04' y='-192.73'>id_cliente &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='778.24' y='-193.73'>integer</text>
+<polygon fill='#e7e2dd' points='528.04,-112.53 528.04,-172.53 887.04,-172.53 887.04,-112.53 528.04,-112.53' stroke='transparent'/>
+<polygon fill='none' points='528.04,-112.53 528.04,-172.53 887.04,-172.53 887.04,-112.53 528.04,-112.53' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='539.04' y='-132.73'>id_boleto &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='778.24' y='-133.73'>integer</text>
+<polygon fill='#e7e2dd' points='528.04,-52.53 528.04,-112.53 887.04,-112.53 887.04,-52.53 528.04,-52.53' stroke='transparent'/>
+<polygon fill='none' points='528.04,-52.53 528.04,-112.53 887.04,-112.53 887.04,-52.53 528.04,-52.53' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='539.04' y='-72.73'>monto &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='765.82' y='-73.73'>decimal</text>
+<polygon fill='none' points='526.54,-51.53 526.54,-293.53 887.54,-293.53 887.54,-51.53 526.54,-51.53' stroke='#29235c' stroke-width='2'/>
+</g>
+
+
+<g class='edge' id='edge2'>
+<title>cliente:e&#45;&gt;compraBoletos:w</title>
+<path d='M353.18,-202.53C426.98,-202.53 447.92,-202.53 516.97,-202.53' fill='none' stroke='#29235c' stroke-width='3'/>
+<polygon fill='#29235c' points='517.04,-206.03 527.04,-202.53 517.04,-199.03 517.04,-206.03' stroke='#29235c' stroke-width='3'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='middle' x='520.82' y='-173.73'>*</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='middle' x='344.29' y='-173.73'>1</text>
+</g>
+
+<g class='node' id='boletos'>
+<title>boletos</title>
+<ellipse cx='1214.68' cy='-172.53' fill='none' rx='214.92' ry='172.57' stroke='black' stroke-width='0'/>
+<polygon fill='#1d71b8' points='1064.68,-232.53 1064.68,-292.53 1364.68,-292.53 1364.68,-232.53 1064.68,-232.53' stroke='transparent'/>
+<polygon fill='none' points='1064.68,-232.53 1064.68,-292.53 1364.68,-292.53 1364.68,-232.53 1064.68,-232.53' stroke='#29235c'/>
+<text fill='#ffffff' font-family='Helvetica,sans-Serif' font-size='32.00' font-weight='bold' text-anchor='start' x='1100.86' y='-253.73'> &#160;&#160;&#160;&#160;&#160;&#160;boletos &#160;&#160;&#160;&#160;&#160;&#160;</text>
+<polygon fill='#e7e2dd' points='1064.68,-172.53 1064.68,-232.53 1364.68,-232.53 1364.68,-172.53 1064.68,-172.53' stroke='transparent'/>
+<polygon fill='none' points='1064.68,-172.53 1064.68,-232.53 1364.68,-232.53 1364.68,-172.53 1064.68,-172.53' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-weight='bold' text-anchor='start' x='1075.49' y='-193.73'>id_boletos</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='1221.31' y='-193.73'> &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='1256.28' y='-193.73'>integer</text>
+<polygon fill='#e7e2dd' points='1064.68,-112.53 1064.68,-172.53 1364.68,-172.53 1364.68,-112.53 1064.68,-112.53' stroke='transparent'/>
+<polygon fill='none' points='1064.68,-112.53 1064.68,-172.53 1364.68,-172.53 1364.68,-112.53 1064.68,-112.53' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='1075.68' y='-132.73'>numero &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='1247.01' y='-133.73'>varchar</text>
+<polygon fill='#e7e2dd' points='1064.68,-52.53 1064.68,-112.53 1364.68,-112.53 1364.68,-52.53 1064.68,-52.53' stroke='transparent'/>
+<polygon fill='none' points='1064.68,-52.53 1064.68,-112.53 1364.68,-112.53 1364.68,-52.53 1064.68,-52.53' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='1075.68' y='-72.73'>id_sorteo &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='1255.88' y='-73.73'>integer</text>
+<polygon fill='none' points='1063.68,-51.53 1063.68,-293.53 1365.68,-293.53 1365.68,-51.53 1063.68,-51.53' stroke='#29235c' stroke-width='2'/>
+</g>
+
+<g class='node' id='sorteo'>
+<title>sorteo</title>
+<ellipse cx='1683.43' cy='-202.53' fill='none' rx='217.58' ry='130.22' stroke='black' stroke-width='0'/>
+<polygon fill='#1d71b8' points='1531.43,-232.53 1531.43,-292.53 1835.43,-292.53 1835.43,-232.53 1531.43,-232.53' stroke='transparent'/>
+<polygon fill='none' points='1531.43,-232.53 1531.43,-292.53 1835.43,-292.53 1835.43,-232.53 1531.43,-232.53' stroke='#29235c'/>
+<text fill='#ffffff' font-family='Helvetica,sans-Serif' font-size='32.00' font-weight='bold' text-anchor='start' x='1576.73' y='-253.73'> &#160;&#160;&#160;&#160;&#160;&#160;sorteo &#160;&#160;&#160;&#160;&#160;&#160;</text>
+<polygon fill='#e7e2dd' points='1531.43,-172.53 1531.43,-232.53 1835.43,-232.53 1835.43,-172.53 1531.43,-172.53' stroke='transparent'/>
+<polygon fill='none' points='1531.43,-172.53 1531.43,-232.53 1835.43,-232.53 1835.43,-172.53 1531.43,-172.53' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-weight='bold' text-anchor='start' x='1542.43' y='-193.73'>id_sorteo</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='1674.02' y='-193.73'> &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='1726.63' y='-193.73'>integer</text>
+<polygon fill='#e7e2dd' points='1531.43,-112.53 1531.43,-172.53 1835.43,-172.53 1835.43,-112.53 1531.43,-112.53' stroke='transparent'/>
+<polygon fill='none' points='1531.43,-112.53 1531.43,-172.53 1835.43,-172.53 1835.43,-112.53 1531.43,-112.53' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='1542.17' y='-132.73'>fecha_sorteo &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='1762.3' y='-133.73'>date</text>
+<polygon fill='none' points='1530.43,-111.53 1530.43,-293.53 1836.43,-293.53 1836.43,-111.53 1530.43,-111.53' stroke='#29235c' stroke-width='2'/>
+</g>
+
+
+<g class='edge' id='edge6'>
+<title>boletos:e&#45;&gt;sorteo:w</title>
+<path d='M1365.68,-82.53C1452.73,-82.53 1440.97,-193.34 1520.3,-202' fill='none' stroke='#29235c' stroke-width='3'/>
+<polygon fill='#29235c' points='1520.26,-205.5 1530.43,-202.53 1520.63,-198.51 1520.26,-205.5' stroke='#29235c' stroke-width='3'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='middle' x='1539.33' y='-202.53'>1</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='middle' x='1359.46' y='-53.73'>*</text>
+</g>
+
+
+<g class='edge' id='edge4'>
+<title>compraBoletos:e&#45;&gt;boletos:w</title>
+<path d='M888.04,-142.53C966.99,-142.53 980.14,-197.49 1053.44,-202.21' fill='none' stroke='#29235c' stroke-width='3'/>
+<polygon fill='#29235c' points='1053.58,-205.72 1063.68,-202.53 1053.8,-198.72 1053.58,-205.72' stroke='#29235c' stroke-width='3'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='middle' x='1072.58' y='-202.53'>1</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='middle' x='881.82' y='-113.73'>*</text>
+</g>
+</g>
+</svg>

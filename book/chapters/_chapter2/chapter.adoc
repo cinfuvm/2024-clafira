@@ -1,0 +1,208 @@
+// Check more syntax at https://github.com/powerman/asciidoc-cheatsheet
+// Set imagesdir property here if needed (to preview a single chapter)
+//:imagesdir: images/
+
+== Base de datos
+
+Base de datos
+
+
+
+image:https://miro.medium.com/v2/resize:fit:1220/0*epnKnkKuLx2RAajt[By PostgreSQL]
+
+.Codigo de base de datos
+[source,slq]
+----
+CREATE TABLE cliente (
+    id_cliente SERIAL PRIMARY KEY,
+    mail VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE sorteo (
+    id_sorteo SERIAL PRIMARY KEY,
+    fecha_sorteo DATE NOT NULL
+);
+
+CREATE TABLE boletos (
+    id_boletos SERIAL PRIMARY KEY,
+    numero VARCHAR(50) NOT NULL,
+    id_sorteo INT,
+    FOREIGN KEY (id_sorteo) REFERENCES sorteo(id_sorteo)
+);
+
+CREATE TABLE compraBoletos (
+    id_cliente INT,
+    id_boleto INT,
+    monto DECIMAL(10, 2),
+    FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente),
+    FOREIGN KEY (id_boleto) REFERENCES boletos(id_boletos)
+);
+
+----
+==== Diagrama ER
+.DBML
+[dbml]
+----
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table cliente {
+  id_cliente integer [primary key]
+  mail varchar
+}
+Table boletos {
+  id_boletos integer [primary key]
+  numero varchar
+  id_sorteo integer
+}
+
+Table sorteo {
+  id_sorteo integer [primary key]
+  fecha_sorteo date
+}
+
+Table compraBoletos {
+  id_cliente integer
+  id_boleto integer
+  monto decimal
+}
+
+Ref: cliente.id_cliente < compraBoletos.id_cliente // many-to-one
+
+Ref: compraBoletos.id_boleto > boletos.id_boletos // many-to-one
+
+Ref: boletos.id_sorteo > sorteo.id_sorteo // many-to-one
+----
+
+
+[NOTE]
+====
+La base de datos a seleccionar es PostgreSQL
+====
+
+
+==== PostgreSQL
+
+PostgreSQL, comúnmente pronunciado "Post-GRES", es una base de datos de código abierto que tiene una sólida reputación por su fiabilidad, flexibilidad y soporte de estándares técnicos abiertos. A diferencia de otros RDMBS (sistemas de gestión de bases de datos relacionales), PostgreSQL (enlace externo a ibm.com) soporta tipos de datos relacionales y no relacionales. Esto la convierte en una de las bases de datos relacionales más compatibles, estables y maduras disponibles actualmente.
+
+=== Selección de Base de Datos: PostgreSQL vs. NoSQL y MySQL
+
+#### ADR Selección de PostgreSQL sobre NoSQL y MySQL
+
+- **Status**: accepted
+- **Date**: 2024-10-18
+
+##### Context and Problem Statement
+
+El proyecto requiere la selección de una base de datos adecuada para manejar información estructurada relacionada con clientes, boletos y sorteos. Las opciones consideradas incluyen bases de datos relacionales como PostgreSQL y MySQL, así como soluciones NoSQL. El objetivo principal es encontrar una tecnología que sea fácil de implementar, eficiente en términos de recursos y que se adapte bien a la naturaleza del proyecto, que tiene tablas sencillas y relaciones claras.
+
+##### Opciones consideradas
+
+1. **PostgreSQL**
+   - Base de datos relacional avanzada, compatible con SQL.
+   - Soporta características avanzadas como transacciones ACID, integridad referencial, y funciones avanzadas que pueden ser útiles para manejo de datos estructurados.
+   - Buena capacidad de manejo de datos relacionales complejos sin necesidad de ajustes complicados.
+
+2. **NoSQL (e.g., MongoDB, Firebase)**
+   - Escalabilidad horizontal y flexibilidad para datos no estructurados.
+   - No requiere esquema fijo, lo que permite cambios rápidos en la estructura de datos.
+   - Sin embargo, la estructura de este proyecto se basa en datos bien definidos y relaciones claras entre tablas, lo cual se maneja mejor con bases de datos relacionales.
+
+3. **MySQL**
+   - Base de datos relacional similar a PostgreSQL.
+   - Más sencilla y ligera, pero con menos características avanzadas en comparación a PostgreSQL.
+   - Carece de algunas capacidades avanzadas para manejar consultas complejas y transacciones que PostgreSQL maneja mejor.
+
+##### Resultado de decisiones
+
+**Elegí la opción 1: PostgreSQL.**
+
+- PostgreSQL es más robusto y flexible que MySQL, permitiendo manejar mejor las consultas complejas y asegurando integridad en las relaciones entre tablas.
+- Las características avanzadas de PostgreSQL, como soporte para transacciones ACID, funciones de ventana, y mayor capacidad de extensión, proporcionan un manejo más eficiente y seguro de los datos estructurados.
+- En comparación con NoSQL, la estructura relacional de PostgreSQL se adapta mejor a la necesidad de mantener datos bien definidos y con relaciones claras, sin la necesidad de escalar masivamente o almacenar datos no estructurados.
+
+##### Consecuencias
+
+- **Ventajas**:
+  - **Eficiencia en manejo de datos estructurados**: PostgreSQL facilita el manejo de datos relacionales con integridad referencial.
+  - **Características avanzadas**: Ofrece soporte para transacciones ACID, funciones de ventana y consultas complejas.
+  - **Capacidad de crecimiento**: Aunque el proyecto es simple ahora, PostgreSQL permite escalar y agregar características adicionales si es necesario en el futuro.
+
+- **Desventajas**:
+  - **Curva de aprendizaje**: Puede ser más complejo de configurar y usar en comparación con bases de datos NoSQL, pero la robustez justifica esta elección.
+  - **Rendimiento en datos no estructurados**: No es la mejor opción si se espera que la base de datos almacene datos no estructurados masivos, aunque esto no es un requisito del proyecto actual.
+
+[WARNING]
+====
+Estas decisiones tendrán consecuencias!
+====
+
+=== Estimación de recursos
+
+Se considera un mínimo de 1000 transacciones diarias y un máximo de 5000 (en promedio 3000), los datos no contienen media y se considera un tiempo de almacenamiento de 5 años.
+
+
+.Codigo de base de datos
+[source,slq]
+----
+id_cliente integer -- 4 bytes
+mail varchar(255) -- (4 + 255) bytes = 259 bytes
+cliente -- 263 bytes
+
+id_boletos integer -- 4 bytes
+numero varchar(50) -- (4 + 50) bytes = 54 bytes
+id_sorteo integer -- 4 bytes
+boletos -- 62 bytes
+
+id_sorteo integer -- 4 bytes
+fecha_sorteo date -- 4 bytes
+sorteo -- 8 bytes
+
+id_cliente integer -- 4 bytes
+id_boleto integer -- 4 bytes
+monto decimal(10,2) -- 8 bytes
+compraBoletos -- 16 bytes
+
+Total --349 bytes
+
+
+QPS_MIN = 1000 / (24*60*60)
+QPS_MIN = 0,0115740740740741
+
+QPS_MAX = 5000/ (24*60*60)
+QPS_MAX = 0,0578703703703704
+
+QPS_AVG = 0,0347222222222222
+
+Total_almacenamiento_5_Y = 349 * 5000 * 365.25 * 5
+Total_almacenamiento_5_Y = 3.19 Gb
+
+----
+
+===== Escalado
+
+El escalado seleccionado es el vertical, ya que se elegira un servidor con los recursos necesarios para la cantidad de queries.
+
+
+// Need special config in Dockerfile
+// .Mermaid
+// [mermaid]
+// ----
+// gitGraph
+//     commit
+//     commit
+//     branch develop
+//     checkout develop
+//     commit
+//     commit
+//     checkout main
+//     merge develop
+//     commit
+//     commit
+// ----
+
+// .BPMN
+// [bpmn]
+// ----
+// include::resources/pizza.bpmn[]
+// ----

@@ -1,0 +1,10 @@
+[glossary]
+== Glosario
+
+Glosario de palabras clave usadas en el proyecto
+[glossary]
+
+CMS::
+  Content management system (Sistema de gestión de contenidos). Es un sistema online que nos permite poner en marcha un sitio web de forma práctica y rápida.
+QPS::
+  Consultas por segundo

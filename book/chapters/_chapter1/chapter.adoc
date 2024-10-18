@@ -1,0 +1,130 @@
+// Check more syntax at https://github.com/powerman/asciidoc-cheatsheet
+// Set imagesdir property here if needed (to preview a single chapter)
+//:imagesdir: images/
+
+== Selección de Servidor
+
+Selección de servidor
+
+image:https://upload.wikimedia.org/wikipedia/commons/8/82/Hostinger_logo.png[By Hostinger_logo]
+
+=== Hostinger
+
+Dado los recursos limitados y el tipo de Persona, no sería tan necesario un servior de baja latencia, el precio varía enttre 8 a 20 euros, para una alternativa de 5000 visitas diarias.
+Cuenta con almacenamiento NVME, da latencias de 100us.
+
+[WARNING]
+====
+Esta decisión tendrá consecuencias
+====
+
+==== Planes
+
+Que cosas ofrece el plan en cuanto a almacenamiento, concurrencia, CDN, etc.
+
+
+- ✅ 100 sitios web
+- ✅~100 000 visitas al mes
+- ✅ 200 GB de almacenamiento NVMe
+- ✅600 000 archivos y directorios (inodos)
+- ✅Plantillas prediseñadas gratis
+- ✅Migración de sitios web automática y gratis
+- ✅SSL ilimitado gratis
+- ✅Email gratis
+- ✅Copias de seguridad diarias y bajo demanda
+- ✅Escáner de vulnerabilidades de WordPress
+- ✅Actualizaciones automáticas inteligentes de WordPress
+- ✅Aceleración WordPress avanzada
+- ✅Ancho de banda ilimitado
+- ✅Dominio gratis (9,99 €)
+- ✅CDN Gratis
+- ✅Herramientas de WordPress con IA
+- ✅WordPress staging
+- ✅Dirección IP dedicada
+- ✅Asistencia prioritaria
+- ✅WordPress administrado
+
+- ✅Instalación de WordPress con 1 clic gratis
+- ✅Migración de sitios web automática y gratis
+- ✅Plantillas prediseñadas gratis
+- ✅Aceleración de WordPress (LiteSpeed)
+- ✅Actualizaciones automáticas inteligentes de WordPress
+- ✅Escáner de vulnerabilidades de WordPress
+- ✅Comprobador de compatibilidad de WordPress
+- ✅WooCommerce Basic
+- ✅WordPress multisitio
+- ✅WP-CLI y SSH
+- ✅El plugin de WordPress Amazon Afiliados gratis.
+- ✅WordPress staging
+- ✅Object Cache para WordPress
+- ✅Copia de seguridad bajo demanda
+- ✅Creador de sitios web de Hostinger
+
+- ✅Creador de sitios web con IA
+- ✅Editor de arrastrar y soltar
+- ✅150 plantillas
+- ✅Integraciones de marketing
+- ✅Generador de imágenes con IA
+- ✅Escritor con IA
+- ✅Generador de blogs con IA
+- ✅Mapas de calor con IA
+- ✅Herramientas de SEO con IA
+- ✅Funciones de eCommerce
+- ✅Comisiones de transacción del 0 %
+- ✅+20 métodos de pago
+- ✅Seguridad
+
+- ✅Protección DDoS mejorada
+- ✅Firewall de aplicaciones web
+- ✅Protección de nameservers Cloudflare
+- ✅Escáner de malware
+- ✅Administrador de acceso seguro
+- ✅Protección de privacidad de dominio WHOIS gratis (9,99 €)
+- ✅Servicio y soporte
+
+- ✅Garantía de reembolso por 30 días
+- ✅Garantía de 99,9% de uptime
+- ✅Centros de datos globales
+- ✅Soporte siempre disponible
+- ✅Asistencia prioritaria
+- ✅Detalles técnicos
+
+- ✅600 000 archivos y directorios (inodos)
+- ✅60 PHP workers
+- ✅~100 000 visitas al mes
+- ✅100 subdominios
+- ✅75 conexiones de MySQL MAX
+- ✅300 bases de datos
+- ✅Cuentas FTP ilimitadas
+- ✅Cronjobs ilimitados
+- ✅Acceso GIT
+- ✅Múltiples versiones de PHP
+- ✅Gestión de DNS
+- ✅Administrador de caché
+- ✅Potente panel de control
+- ✅Acceso SSH
+
+
+
+// Need special config in Dockerfile
+// .Mermaid
+// [mermaid]
+// ----
+// gitGraph
+//     commit
+//     commit
+//     branch develop
+//     checkout develop
+//     commit
+//     commit
+//     checkout main
+//     merge develop
+//     commit
+//     commit
+// ----
+
+// .BPMN
+// [bpmn]
+// ----
+// include::resources/pizza.bpmn[]
+// ----
